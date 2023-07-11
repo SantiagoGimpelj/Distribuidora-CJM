@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row h-100">
+            <div class="col-sm-12 col-xl-2 col-xxl-2 bg-black text-center">
+                <img src="../assets/images/logo 2.webp" alt="" class="rounded-3 border border-light border-4 m-2">
+            </div>
+            <nav class="col-sm-12 col-xl-10 col-xxl-10 bg-black navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon bg-warning"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="d-flex justify-content-around align-items-center h-100 navbar-nav w-100">
+                            <li class="nav-item lifondo rounded-3 border border-light border-4 m-2 p-1">
+                                <a class="nav-link active" aria-current="page" href="../index.html">INDEX</a>
+                            </li>
+                            <li class="nav-item lifondo rounded-3 border border-light border-4 m-2 p-1">
+                                <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                            </li>
+                            <li class="nav-item lifondo rounded-3 border border-light border-4 m-2 p-1">
+                                <a class="nav-link" href="../pages/Productos.html">PRODUCTOS</a>
+                            </li>
+                            <li class="nav-item lifondo rounded-3 border border-light border-4 m-2 p-1">
+                                <a class="nav-link" href="../pages/Promociones.html">PROMOCIONES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <form action="" method="post" enctype="text/plain">
+                <fieldset id="fieldset1">
+                    <legend>
+                        <h2>INGRESE LOS SIGUIENTES DATOS</h2>
+                    </legend>
+                    <div>
+                        <label for="nombre">INGRESE SU NOMBRE</label>
+                        <input type="text" id="nombre" placeholder="Maximo 10 caracteres" required />
+                    </div>
+
+                    <div>
+                        <label for="nombre">INGRESE SU APELLIDO</label>
+                        <input type="text" id="nombre" placeholder="Maximo 10 caracteres" required />
+                    </div>
+
+                    <div>
+                        <label for="correo">INGRESE SU CORREO</label>
+                        <input type="email" name="" id="correo" required />
+                    </div>
+
+                    <div>
+                        <label for="pass">INGRESE SU CONTRASEÑA</label>
+                        <input type="password" name="" id="pass" required />
+                    </div>
+                </fieldset>
+                <fieldset id="fieldset2">
+                    <legend>
+                        <h2>DATOS PERSONALES</h2>
+                    </legend>
+                    <div>
+                        <label for="fnac">FECHA DE NACIMIENTO</label>
+                        <input type="date" name="" id="fnac">
+                    </div>
+                    <div>
+                        <label for="edad">INDIQUE SU EDAD</label>
+                        <input id="edad" name="edad" type="number" min="1" max="100" required>
+                    </div>
+                    <div>
+                        <label for="sueldo">INDIQUE SASTIFACCION</label>
+                        <input id="sueldo" name="sueldo" type="range" step="5" min="0" max="10" required>
+                    </div>
+                    <div>
+                        <p>ES USTED MAYOR DE EDAD</p>
+                        <label for="esMayor">si</label>
+                        <input type="checkbox" name="" id="esMayor" value="si">
+                        <label for="esMenor">no</label>
+                        <input type="checkbox" name="" id="esMenor" value="No" />
+                    </div>
+
+                    <div>
+                        <p>GENERO</p>
+                        <label for="GeneroM">Masculino</label>
+                        <input type="radio" name="genero" id="GeneroM" value="Maculino" />
+                        <label for="GeneroF">Femenino</label>
+                        <input type="radio" name="genero" id="GeneroF" value="Femenino" />
+                        <label for="GeneroO">Otro</label>
+                        <input type="radio" name="genero" id="GeneroO" value="Otro" />
+                    </div>
+                </fieldset>
+                <fieldset id="fieldset3">
+                    <legend>
+                        <h2>INDIQUE UN COMENTARIO</h2>
+                    </legend>
+                    <textarea name="comenatario" id="comentario" cols="30" rows="10"
+                        placeholder="ingrese un comentario" class="width"></textarea>
+                </fieldset>
+                <div>
+                    <input type="submit" value="ENVIAR" class="boton">
+                    <input type="reset" value="RESETEAR" class="boton">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="redessociales">
+            <a href="" target="_blank"><img src="../assets/images/Facebook_f_logo_(2019).svg.webp" alt=""></a>
+            <a href="" target="_blank"><img src="../assets/images/ins.png" alt=""></a>
+        </div>
+        <aside id="aside"><a href="" target="_blank"><img src="../assets/images/wassap.png" alt=""></a></aside>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
