@@ -222,7 +222,7 @@ main form h2{
   flex-wrap: nowrap;
   margin: 10px;
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 #sectionnos1 p{
