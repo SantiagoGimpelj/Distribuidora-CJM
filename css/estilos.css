@@ -1,74 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  height: 100vh;
-  display: grid;
-  grid-template-rows:1fr 4fr 0.5fr ;
-  grid-template-columns:1fr ;
-  grid-template-areas:
-  "header"
-  "main"
-  "footer"
-  ;
-}
-header{
-background-color: black;
-grid-area:header ;
-}
-main{
-grid-area:main ;
-}
-footer{
-background-color: black;
-grid-area:footer ;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-}
-header img{
-  width: 170px;
-}
-.lifondo{
-  background-color: gold;
-}
-.active{
-  color: black;
-}
-#navbarNav{
-  font-family: pacifico;
-  font-size: 1.5rem;
-}
-#redessociales img{
-  width: 80px;
-  background-color: gold;
-  border: solid 4px rgb(255, 255, 255);
-  border-radius: 20px;
-  margin: 10px;
-}
-#aside img{
-  background-color: gold;
-    width: 80px;
-    height: 80px;
-    border: 5px solid black;
-    padding: 5px;
-    border-radius: 20px;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-}
-/* MAIN DE INDEX */
-#mainindex{
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+#mainindex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-#sectionindex1{
+#mainindex #sectionindex1 {
   flex-basis: 70%;
   display: flex;
   flex-direction: row;
@@ -76,102 +12,120 @@ header img{
   justify-content: center;
   align-items: center;
 }
-#sectionindex1 p{
+#mainindex #sectionindex1 p {
   background-color: gold;
+  color: black;
   margin: 10px;
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
   font-family: pacifico;
-  border: solid black 4px;
+  border: solid white 4px;
   border-radius: 10px;
 }
-#sectionindex2{
+#mainindex #sectionindex2 {
   flex-basis: 30%;
   display: grid;
-  grid-template-rows: repeat(2,1fr);
-  grid-template-columns:repeat(2,1fr);
-  grid-template-areas:
-  "imgin1 imgin3"
-  "imgin2 imgin4";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "imgin1 imgin3" "imgin2 imgin4";
   justify-items: center;
   align-items: center;
 }
-#sectionindex2 img{
-  width: 270px;
-  height: 270px;
-  border: solid 4px black;
-  padding: 10px;
-  background-color: gold;
-  border-radius: 10px;
-}
-#imgin1{
+#mainindex #sectionindex2 #imgin1 {
   grid-area: imgin1;
 }
-#imgin2{
+#mainindex #sectionindex2 #imgin2 {
   grid-area: imgin2;
 }
-#imgin3{
+#mainindex #sectionindex2 #imgin3 {
   grid-area: imgin3;
 }
-#imgin4{
+#mainindex #sectionindex2 #imgin4 {
   grid-area: imgin4;
 }
-/* MAIN DE PROMOCIONES */
-#sectionpromo1{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-#sectionpromo1 h2{
-  background-color: gold;
-  margin-top: 10px;
-  padding: 5px;
-  font-family: pacifico;
-  border: solid black 4px;
-  border-radius: 10px;
-}
-#sectionpromo2{
-  display: grid;
-  grid-template-rows:repeat(2,1fr) ;
-  grid-template-columns:repeat(3,1fr) ;
-  grid-template-areas:
-  "imgpromo1 imgpromo3 imgpromo5"
-  "imgpromo2 imgpromo4 imgpromo6";
-  justify-items: center;
-  align-items: center;
-}
-#sectionpromo2 img{
+#mainindex #sectionindex2 img {
   width: 270px;
   height: 270px;
-  border: solid black 4px;
-  border-radius: 10px;
-  margin: 10px;
+  border: solid 4px white;
+  margin: 5px;
   padding: 10px;
   background-color: gold;
+  border-radius: 10px;
 }
-#imgpromo1{
-  grid-area: imgpromo1;
+
+@media (max-width: 1024px) {
+  #mainindex #sectionindex2 img {
+    width: 200px;
+    height: 200px;
+  }
 }
-#imgpromo2{
-  grid-area: imgpromo2;
-} 
-#imgpromo3{
-  grid-area: imgpromo3;
+@media (max-width: 768px) {
+  #mainindex {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainindex #sectionindex2 img {
+    width: 150px;
+    height: 150px;
+  }
 }
-#imgpromo4{
-  grid-area: imgpromo4;
+@media (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
+  }
+  footer #aside img {
+    width: 60px;
+    height: 60px;
+  }
+  #mainindex #sectionindex1 p {
+    font-size: 1rem;
+  }
 }
-#imgpromo5{
-  grid-area: imgpromo5;
+@media (max-width: 480px) {
+  #mainindex #sectionindex2 img {
+    width: 120px;
+    height: 120px;
+  }
 }
-#imgpromo6{
-  grid-area: imgpromo6;
+@media (min-width: 320px) and (max-width: 400px) {
+  #mainindex #sectionindex1 p {
+    font-size: 0.8;
+  }
 }
-/* MAIN DE CONTACTO */
-main form{
+@media (max-width: 320px) {
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+  #mainindex #sectionindex1 p {
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+  #mainindex #sectionindex2 img {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+  }
+  footer #redessociales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
+  }
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+}
+main form {
+  color: black;
   font-size: 1rem;
   font-family: pacifico;
   text-align: center;
@@ -182,40 +136,115 @@ main form{
   justify-content: center;
   align-items: center;
 }
-main form h2{
+main form h2 {
   font-size: 2rem;
 }
-#fieldset1{
-  border: 4px solid black;
+main form #fieldset1 {
+  border-radius: 10px;
+  border: 4px solid white;
   background-color: gold;
   margin-bottom: 10px;
   padding: 10px;
   width: 800px;
 }
-#fieldset2{
-  border: 4px solid black;
+main form #fieldset2 {
+  border-radius: 10px;
+  border: 4px solid white;
   background-color: gold;
   margin-bottom: 10px;
   width: 800px;
   padding: 10px;
 }
-#fieldset3{
-  border: 4px solid black;
+main form #fieldset3 {
+  border-radius: 10px;
+  border: 4px solid white;
   background-color: gold;
   margin-bottom: 10px;
   width: 800px;
   padding: 10px;
 }
-.boton{
-  border: 4px solid black;
+main form .boton {
+  border: 4px solid white;
   background-color: gold;
-  padding:5px;
+  padding: 5px;
 }
-/* MAIN DE NOSOTROS */
-#mainnosotros{
+
+@media (max-width: 768px) {
+  main form #fieldset1 {
+    width: 700px;
+  }
+  main form #fieldset2 {
+    width: 700px;
+  }
+  main form #fieldset3 {
+    width: 700px;
+  }
+}
+@media (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
+  }
+  footer #aside img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main form h2 {
+    font-size: 1.5rem;
+  }
+  main form #fieldset1 {
+    width: 500px;
+  }
+  main form #fieldset2 {
+    width: 500px;
+  }
+  main form #fieldset3 {
+    width: 500px;
+  }
+}
+@media (max-width: 320px) {
+  header #navbarNav {
+    font-family: pacifico;
+    font-size: 0.8rem;
+  }
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+  footer #redessociales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
+  }
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+  main form h2 {
+    font-size: 1rem;
+  }
+  main form #fieldset1 {
+    width: 400px;
+  }
+  main form #fieldset2 {
+    width: 400px;
+  }
+  main form #fieldset3 {
+    width: 400px;
+  }
+}
+#mainnosotros {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-#sectionnos1{
+#mainnosotros #sectionnos1 {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -225,16 +254,16 @@ main form h2{
   justify-content: space-evenly;
   align-items: center;
 }
-#sectionnos1 p{
+#mainnosotros #sectionnos1 p {
+  color: black;
   background-color: gold;
-  border: 4px solid black;
+  border: 4px solid white;
   border-radius: 10px;
   font-size: 1.5rem;
   font-family: pacifico;
   padding: 10px;
 }
-
-#sectionnos2{
+#mainnosotros #sectionnos2 {
   flex-basis: 50%;
   display: flex;
   flex-direction: row;
@@ -242,28 +271,143 @@ main form h2{
   justify-content: center;
   align-items: center;
 }
-#sectionnos2 img{
+#mainnosotros #sectionnos2 img {
   width: 500px;
   height: 500px;
-  border: solid black 4px;
+  border: solid white 4px;
   border-radius: 10px;
   padding: 10px;
   background-color: gold;
 }
-/* MAIN DE PRODUCTOS */
-#mainproductos{
-  display: flex;
-}
-li{
-  list-style: none;
-  background-color: gold;
-}
 
-li a{
+@media (max-width: 1200px) {
+  #mainnosotros #sectionnos1 p {
+    font-size: 1.3rem;
+  }
+  #mainnosotros #sectionnos2 img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  #mainnosotros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainnosotros #sectionnos1 div {
+    width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  #mainnosotros #sectionnos1 div {
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
+  }
+  footer #aside img {
+    width: 60px;
+    height: 60px;
+  }
+  #mainnosotros #sectionnos1 div {
+    width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  #mainnosotros #sectionnos1 div {
+    width: 300px;
+  }
+  #mainnosotros #sectionnos1 div p {
+    font-size: 1rem;
+  }
+  #mainnosotros #sectionnos2 img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 320px) {
+  header #navbarNav {
+    font-family: pacifico;
+    font-size: 0.8rem;
+  }
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+  footer #redessociales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
+  }
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+  #mainnosotros #sectionnos1 div {
+    width: 200px;
+  }
+  #mainnosotros #sectionnos1 div p {
+    font-size: 0.7rem;
+  }
+  #mainnosotros #sectionnos2 img {
+    width: 200px;
+    height: 200px;
+  }
+}
+#mainproductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#mainproductos #sectionproduc1 {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+#mainproductos #sectionproduc1 nav #menuproduct1 {
+  border: solid white 4px;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+#mainproductos #sectionproduc1 nav #menuproduct1 li {
+  list-style: none;
+  color: black;
+  background-color: gold;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: pacifico;
+  border: solid white 4px;
+  border-radius: 10px;
+}
+#mainproductos #sectionproduc1 nav #menuproduct1 li:hover {
+  background-color: brown;
+}
+#mainproductos #sectionproduc1 nav #menuproduct1 li a {
   text-decoration: none;
   color: black;
 }
-#sectionproduc1{
+#mainproductos #sectionproduc1 nav #menuproduct1 li a:hover {
+  color: white;
+}
+#mainproductos #sectionproduc2 {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -271,13 +415,18 @@ li a{
   justify-content: center;
   align-items: center;
 }
-#menuproduct1{
-  background-color: rgb(0, 0, 0);
+#mainproductos #sectionproduc2 nav #menuproduct2 {
+  border: solid white 4px;
+  border-radius: 10px;
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-#menuproduct1 li{
+#mainproductos #sectionproduc2 nav #menuproduct2 li {
+  list-style: none;
+  background-color: gold;
+  color: black;
   margin: 10px;
   text-align: center;
   font-size: 1.5rem;
@@ -285,150 +434,299 @@ li a{
   border: solid white 4px;
   border-radius: 10px;
 }
-
-#sectionproduc2{
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+#mainproductos #sectionproduc2 nav #menuproduct2 li:hover {
+  background-color: brown;
 }
-#menuproduct2{
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+#mainproductos #sectionproduc2 nav #menuproduct2 li a {
+  text-decoration: none;
+  color: black;
 }
-#menuproduct2 li{
-  margin: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: pacifico;
-  border: solid white 4px;
-  border-radius: 10px;
+#mainproductos #sectionproduc2 nav #menuproduct2 li a:hover {
+  color: white;
 }
 
-
-
-
-@media(max-width: 1200px){
-
-}
-@media(max-width: 1024px){
-  #sectionindex2 img{
-    width: 200px;
-    height: 200px;
-    margin-left: 5px;
+@media (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
   }
-  #sectionindex1 p{
-    font-size: 1rem;
+  footer #aside img {
+    width: 60px;
+    height: 60px;
   }
 }
-
-@media(max-width: 768px){
-  #sectionindex2 img{
-    width: 150px;
-    height: 150px;
-    margin-bottom: 5px;
-  }
-  #mainindex{
+@media (max-width: 480px) {
+  #mainproductos {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
 }
-@media(max-width: 600px){
-  #navbarNav{
-    font-size: 1rem;
-  }
-  #redessociales img{
-    width: 70px;
-  }
-  #aside img{
-    background-color: gold;
-      width: 70px;
-      height: 70px;
-  }
-  #fieldset1{
-    width: 600px;
-  }
-  #fieldset2{
-    width: 600px;
-  }
-  #fieldset3{
-    width: 600px;
-  }
-}
-@media(max-width: 480px){
-  #sectionindex2 img{
-    width: 120px;
-    height: 120px;
-  }
-  header img{
-    width: 150px;
-  }
-  #fieldset1{
-    width: 300px;
-  }
-  #fieldset2{
-    width: 300px;
-  }
-  #fieldset3{
-    width: 300px;
-  }
-  main form h2{
-    font-size: 1.5rem;
-  }
-} 
-@media(min-width: 320px) and (max-width: 400px){
-  #sectionindex1 p{
+@media (max-width: 320px) {
+  header #navbarNav {
+    font-family: pacifico;
     font-size: 0.8rem;
   }
-  main form h2{
+  header .fontsize {
+    font-family: pacifico;
     font-size: 1rem;
   }
-}
-@media(max-width: 320px){
-  #sectionindex1 p{
-    margin: 5px;
-    padding: 5px;
-    font-size: 0.7rem;
-  }
-  #sectionindex2 img{
-    width: 80px;
-    height: 80px;
-    padding: 5px;
-  }
-  header img{
-    width: 100px;
-  }
-  #navbarNav{
-    font-size: 0.8rem;
-  }
-  #redessociales img{
-    width: 40px;
+  footer #redessociales {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  #aside img{
-      width: 40px;
-      height: 40px;
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
   }
-  main form{
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+  #mainproductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainproductos #sectionproduc1 nav #menuproduct1 li {
+    font-size: 1rem;
+  }
+  #mainproductos #sectionproduc2 nav #menuproduct2 li {
+    font-size: 1rem;
+  }
+}
+main #sectionpromo1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main #sectionpromo1 h2 {
+  color: black;
+  background-color: gold;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: pacifico;
+  border: solid white 4px;
+  border-radius: 10px;
+}
+main #sectionpromo1 h2:hover {
+  background-color: brown;
+  border-radius: 10px;
+  color: white;
+}
+main #sectionpromo2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "imgpromo1 imgpromo3 imgpromo5" "imgpromo2 imgpromo4 imgpromo6";
+  justify-items: center;
+  align-items: center;
+}
+main #sectionpromo2 img {
+  width: 270px;
+  height: 270px;
+  border: solid white 4px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: gold;
+}
+main #sectionpromo2 img:hover {
+  background-color: brown;
+}
+main #sectionpromo2 h3 {
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: pacifico;
+  background-color: gold;
+  border: 4px white solid;
+  border-radius: 10px;
+}
+main #sectionpromo2 h3:hover {
+  background-color: brown;
+  color: white;
+}
+main #sectionpromo2 h3::before {
+  content: "$ ";
+}
+main #sectionpromo2 h3::after {
+  content: ",00";
+}
+main #sectionpromo2 #imgpromo1 {
+  grid-area: imgpromo1;
+}
+main #sectionpromo2 #imgpromo2 {
+  grid-area: imgpromo2;
+}
+main #sectionpromo2 #imgpromo3 {
+  grid-area: imgpromo3;
+}
+main #sectionpromo2 #imgpromo4 {
+  grid-area: imgpromo4;
+}
+main #sectionpromo2 #imgpromo5 {
+  grid-area: imgpromo5;
+}
+main #sectionpromo2 #imgpromo6 {
+  grid-area: imgpromo6;
+}
+
+@media (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
+  }
+  footer #aside img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main #sectionpromo1 h2 {
+    font-size: 1rem;
+  }
+  main #sectionpromo2 img {
+    width: 150px;
+    height: 150px;
+  }
+  main #sectionpromo2 h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  header #navbarNav {
+    font-family: pacifico;
+    font-size: 0.8rem;
+  }
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+  footer #redessociales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
+  }
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+  main #sectionpromo1 h2 {
     font-size: 0.6rem;
   }
-    #fieldset1{
-      width: 200px;
-    }
-    #fieldset2{
-      width: 200px;
-    }
-    #fieldset3{
-      width: 200px;
-    }
-    main form h2{
-      font-size: 0.8rem;
-    }
+  main #sectionpromo2 img {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    padding: 2px;
+  }
+  main #sectionpromo2 h3 {
+    font-size: 0.6rem;
+  }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 0.5fr;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body header h1 {
+  color: white;
+}
+body header h1:hover {
+  color: brown;
+}
+body header li:hover {
+  background-color: brown;
+}
+body header a {
+  text-decoration: none;
+}
+body main {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 19%, rgb(245, 255, 0) 53%, rgb(0, 0, 0) 83%);
+  grid-area: main;
+}
+body footer {
+  background-color: black;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fontsize {
+  font-family: pacifico;
+  font-size: 2rem;
+}
+
+.lifondo {
+  background-color: gold;
+}
+
+.marginpadding {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#navbarNav {
+  font-family: pacifico;
+  font-size: 1rem;
+}
+
+#redessociales img {
+  width: 80px;
+  background-color: gold;
+  border: solid 4px rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: 10px;
+}
+#redessociales img:hover {
+  background-color: brown;
+  border-radius: 20px;
+  color: white;
+}
+
+#aside img {
+  background-color: gold;
+  width: 80px;
+  height: 80px;
+  border: 5px solid white;
+  padding: 5px;
+  border-radius: 20px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+#aside img:hover {
+  background-color: brown;
+  border-radius: 20px;
+  color: white;
+}
+
+/*# sourceMappingURL=estilos.css.map */

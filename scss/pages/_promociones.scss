@@ -1,0 +1,191 @@
+main{
+    #sectionpromo1{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      h2{
+        color: black;
+        background-color: gold;
+        margin-top: 10px;
+        padding: 10px;
+        font-family: pacifico;
+        border: solid white 4px;
+        border-radius: 10px;
+        &:hover{
+            background-color: brown;
+            border-radius: 10px;
+            color: white;
+        }
+      }
+  
+    }
+    #sectionpromo2{
+      display: grid;
+      grid-template-rows:repeat(2,1fr) ;
+      grid-template-columns:repeat(3,1fr) ;
+      grid-template-areas:
+      "imgpromo1 imgpromo3 imgpromo5"
+      "imgpromo2 imgpromo4 imgpromo6";
+      justify-items: center;
+      align-items: center;
+      img{
+        &:hover{
+            background-color: brown;
+        }
+        width: 270px;
+        height: 270px;
+        border: solid white 4px;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        background-color: $fondogold;
+      }
+      h3{
+        &:hover{
+            background-color: brown;
+            color: white;
+        }
+        color: $fondoblack;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 2.5rem;
+        text-align: center;
+        font-family: $pacifico;
+        background-color: $fondogold;
+        border:4px white solid;
+        border-radius: 10px;
+      }
+      h3::before{
+        content: "$ "
+      }
+      h3::after{
+        content: ",00"
+      }
+      #imgpromo1{
+        grid-area:imgpromo1 ;
+      }
+      #imgpromo2{
+        grid-area:imgpromo2;
+      }
+      #imgpromo3{
+        grid-area: imgpromo3;
+      }
+      #imgpromo4{
+        grid-area: imgpromo4;
+      }
+      #imgpromo5{
+        grid-area: imgpromo5;
+      }
+      #imgpromo6{
+        grid-area:imgpromo6 ;
+      }
+    }
+  }
+
+  // RESPONSIVE DE PROMOCIONES
+  @media(max-width: 1200px) {
+
+  }
+  
+  @media(max-width: 1024px) {
+  
+  }
+  
+  @media(max-width: 768px) {
+  
+  }
+  
+  @media(max-width: 600px) {
+    footer {
+      #redessociales {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+  
+      #aside {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+  
+  @media(max-width: 480px) {
+    main{
+      #sectionpromo1{
+        h2{
+          font-size: 1rem;
+        }
+      }
+      #sectionpromo2{
+        img{
+          width: 150px;
+          height: 150px;
+        }
+        h3{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  @media(min-width: 320px) and (max-width: 400px) {}
+  
+  @media(max-width: 320px) {
+    header {
+      #navbarNav {
+        font-family: $pacifico;
+        font-size: 0.8rem;
+      }
+    }
+  
+    header {
+      .fontsize {
+        font-family: $pacifico;
+        font-size: 1rem;
+      }
+    }
+  
+    footer {
+      #redessociales {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+  
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+  
+      #aside {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    main{
+      #sectionpromo1{
+        h2{
+          font-size: 0.6rem;
+        }
+      }
+      #sectionpromo2{
+        img{
+          width: 60px;
+          height: 60px;
+          margin: 2px;
+          padding: 2px;
+        }
+        h3{
+          font-size: 0.6rem;
+        }
+      }
+    }
+ }
