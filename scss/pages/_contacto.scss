@@ -1,14 +1,10 @@
 main form{
+  @include flexbox(column, wrap, center, center);
     color: $fondoblack;
     font-size: 1rem;
     font-family: $pacifico;
     text-align: center;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     h2{
        font-size: 2rem;
     }
@@ -102,7 +98,20 @@ main form{
 }
 
 @media(min-width: 320px) and (max-width: 400px) {
-
+  main form{
+    h2{
+      font-size: 1rem;
+    }
+    #fieldset1{
+      width: 350px;
+    }
+    #fieldset2{
+      width: 350px;
+    }
+    #fieldset3{
+      width: 350px;
+    }
+  }
 }
 
 @media(max-width: 320px) {
@@ -140,13 +149,13 @@ main form{
         font-size: 1rem;
       }
       #fieldset1{
-        width: 400px;
+        width: 300px;
       }
       #fieldset2{
-        width: 400px;
+        width: 300px;
       }
       #fieldset3{
-        width: 400px;
+        width: 300px;
       }
     }
 }

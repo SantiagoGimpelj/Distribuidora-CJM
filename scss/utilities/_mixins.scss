@@ -1,3 +1,10 @@
 @mixin reseto-lista{
     list-style: none;
+    
+}@mixin flexbox($direction, $wrap, $justify, $align) {
+    display:flex;
+    flex-direction:$direction;
+    flex-wrap:$wrap;
+    justify-content:$justify;
+    align-items:$align;
 }

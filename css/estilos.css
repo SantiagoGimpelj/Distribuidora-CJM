@@ -125,16 +125,16 @@
   }
 }
 main form {
-  color: black;
-  font-size: 1rem;
-  font-family: pacifico;
-  text-align: center;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: black;
+  font-size: 1rem;
+  font-family: pacifico;
+  text-align: center;
+  margin: 10px;
 }
 main form h2 {
   font-size: 2rem;
@@ -204,6 +204,20 @@ main form .boton {
     width: 500px;
   }
 }
+@media (min-width: 320px) and (max-width: 400px) {
+  main form h2 {
+    font-size: 1rem;
+  }
+  main form #fieldset1 {
+    width: 350px;
+  }
+  main form #fieldset2 {
+    width: 350px;
+  }
+  main form #fieldset3 {
+    width: 350px;
+  }
+}
 @media (max-width: 320px) {
   header #navbarNav {
     font-family: pacifico;
@@ -230,13 +244,13 @@ main form .boton {
     font-size: 1rem;
   }
   main form #fieldset1 {
-    width: 400px;
+    width: 300px;
   }
   main form #fieldset2 {
-    width: 400px;
+    width: 300px;
   }
   main form #fieldset3 {
-    width: 400px;
+    width: 300px;
   }
 }
 #mainnosotros {
@@ -245,14 +259,14 @@ main form .boton {
   flex-wrap: nowrap;
 }
 #mainnosotros #sectionnos1 {
-  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin: 10px;
-  text-align: center;
   justify-content: space-evenly;
   align-items: center;
+  flex-basis: 50%;
+  margin: 10px;
+  text-align: center;
 }
 #mainnosotros #sectionnos1 p {
   color: black;
@@ -264,12 +278,12 @@ main form .boton {
   padding: 10px;
 }
 #mainnosotros #sectionnos2 {
-  flex-basis: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  flex-basis: 50%;
 }
 #mainnosotros #sectionnos2 img {
   width: 500px;
@@ -370,12 +384,12 @@ main form .boton {
   flex-wrap: nowrap;
 }
 #mainproductos #sectionproduc1 {
-  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  flex-basis: 50%;
   margin: 10px;
 }
 #mainproductos #sectionproduc1 nav #menuproduct1 {
@@ -408,12 +422,12 @@ main form .boton {
   color: white;
 }
 #mainproductos #sectionproduc2 {
-  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  flex-basis: 50%;
 }
 #mainproductos #sectionproduc2 nav #menuproduct2 {
   border: solid white 4px;
@@ -502,7 +516,7 @@ main form .boton {
 }
 main #sectionpromo1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: eow;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -581,7 +595,17 @@ main #sectionpromo2 #imgpromo6 {
   grid-area: imgpromo6;
 }
 
+@media (max-width: 768px) {
+  main #sectionpromo2 img {
+    width: 200px;
+    height: 200px;
+  }
+}
 @media (max-width: 600px) {
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1.3rem;
+  }
   footer #redessociales img {
     width: 60px;
     height: 60px;
@@ -590,8 +614,6 @@ main #sectionpromo2 #imgpromo6 {
     width: 60px;
     height: 60px;
   }
-}
-@media (max-width: 480px) {
   main #sectionpromo1 h2 {
     font-size: 1rem;
   }
@@ -601,6 +623,38 @@ main #sectionpromo2 #imgpromo6 {
   }
   main #sectionpromo2 h3 {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  main #sectionpromo1 h2 {
+    font-size: 0.8rem;
+  }
+  main #sectionpromo2 img {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    padding: 2px;
+  }
+  main #sectionpromo2 h3 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 400px) {
+  header .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+  main #sectionpromo1 h2 {
+    font-size: 0.6rem;
+  }
+  main #sectionpromo2 img {
+    width: 75px;
+    height: 75px;
+    margin: 2px;
+    padding: 2px;
+  }
+  main #sectionpromo2 h3 {
+    font-size: 0.6rem;
   }
 }
 @media (max-width: 320px) {
