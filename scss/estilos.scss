@@ -1,106 +1,11 @@
 @import"./utilities/variables";
 @import"./utilities/mixins";
+@import"./layout/estructura";
+@import"./layout/header";
+@import"./layout/main";
+@import"./layout/footer";
 @import"./pages/home";
 @import"./pages/contacto";
 @import"./pages/nosotros";
 @import"./pages/productos";
-@import"./pages/promociones";
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows:1fr 4fr 0.5fr ;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer"
-    ;
-    header{
-      grid-area: header;
-      h1{
-        color:white;
-        &:hover{
-          color: brown;
-        }
-      }
-      li{
-        &:hover{
-          background-color: brown;
-        }
-      }
-        a{
-            text-decoration: none;
-        }
-    }
-    main{
-        background: linear-gradient(180deg, rgba(0,0,0,1) 19%, rgba(245,255,0,1) 53%, rgba(0,0,0,1) 83%);
-        grid-area: main;
-    }
-    footer{
-        background-color: black;
-        grid-area:footer ;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        }
-}
-// CLASES Y ID
-.fontsize{
-  font-family: $pacifico;
-  font-size: 2rem;
-}
-.lifondo{
-  background-color: $fondogold;
-}
-.marginpadding{
-  margin-top: 10px;
-  padding: 10px;
-}
-#navbarNav{
-  font-family: $pacifico;
-  font-size: 1rem;
-}
-#redessociales img{
-  width: 80px;
-  background-color: $fondoblack;
-  border: solid 4px rgb(255, 255, 255);
-  border-radius: 20px;
-  margin: 10px;
-  &:hover{
-    background-color: brown;
-    border-radius: 20px;
-    color: white;
-  }
-}
-#aside img{
-  background-color: $fondogold;
-    width: 80px;
-    height: 80px;
-    border: 5px solid white;
-    padding: 5px;
-    border-radius: 20px;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    &:hover{
-      background-color: brown;
-      border-radius: 20px;
-      color: white;
-    }
-}
-
-
-
-
-
-
-
-  
-  
+@import"./pages/promociones"; 

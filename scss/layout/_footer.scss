@@ -1,0 +1,62 @@
+footer {
+    @include flexbox(row, wrap, center, center);
+    background-color: black;
+    grid-area: footer;
+
+    #redessociales {
+        @include media(320px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: 80px;
+            background-color: $fondoblack;
+            border: $border;
+            border-radius: 20px;
+            margin: 10px;
+
+            @include media(600px) {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include media(320px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                background-color: brown;
+                border-radius: 20px;
+                color: white;
+            }
+        }
+    }
+
+    #aside {
+        img {
+            @include contenedorimg($fondogold, 80px, 80px, $border, 20px, 0px, 5px);
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+
+            @include media(600px) {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include media(320px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                background-color: brown;
+                border-radius: 20px;
+                color: white;
+            }
+        }
+    }
+}

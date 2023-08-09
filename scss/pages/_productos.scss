@@ -1,181 +1,166 @@
-#mainproductos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    #sectionproduc1{
-      @include flexbox(column, nowrap, center, center);
-      flex-basis: 50%;
-      margin: 10px;
-      nav{
-        #menuproduct1{
-          border:solid white 4px;
-          border-radius: 10px;
-          background-color: $fondoblack;
-          display: flex;
-          flex-direction: column;
-          padding: 10px;
-          li{
-            @include reseto-lista;
-            color: $fondoblack;
-            background-color:$fondogold;
-            margin: 10px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-family: $pacifico;
-            border: solid white 4px;
-            border-radius: 10px;
-            &:hover{
-              background-color: brown;
-            }
-            a{
-              text-decoration: none;
-              color: $fondoblack;
-              &:hover{
-                color: white;
-              }
-            }
-          }
+#mainproductos {
+  @include flexbox(row, nowrap, center, center);
+
+  @include media(991.98px) {
+    flex-direction: column;
+  }
+
+  #sectionproductimg1 {
+    @include flexbox(column, wrap, center, center);
+    flex-basis: 20%;
+
+    div {
+      @include flexbox(column, wrap, center, center);
+      animation-timing-function: linear;
+      animation: backInLeft;
+      animation-duration: 1.3s;
+
+      img {
+        @include contenedorimg($fondogold, 200px, 200px, $border, 10px, 10px, 5px);
+
+        @include media(1200px) {
+          width: 160px;
+          height: 160px;
+        }
+
+        @include media(991.98px) {
+          width: 160px;
+          height: 160px;
         }
       }
     }
-    #sectionproduc2{
-      @include flexbox(column,nowrap, center, center);
-      flex-basis: 50%;
-      nav{
-        #menuproduct2{
-          border:solid white 4px;
-          border-radius: 10px;
-          background-color: $fondoblack;
-          display: flex;
-          flex-direction: column;
-          padding: 10px;
-          li{
-            @include reseto-lista;
-            background-color: $fondogold;
-            color: $fondoblack;
-            margin: 10px;
-            text-align: center;
-            font-size: 1.5rem;
-            font-family: $pacifico;
-            border: solid white 4px;
-            border-radius: 10px;
-            &:hover{
-              background-color: brown;
-            }
-            a{
-              text-decoration: none;
-              color:$fondoblack;
-              &:hover{
-                color: white;
-              }
-            }
-          }
-        }
-      }
-    } 
   }
 
+  #sectionproduc1 {
+    @include flexbox(row, nowrap, center, center);
 
-// RESPONSIVE DE PRODUCTOS
-@media(max-width: 1200px) {
-
-}
-
-@media(max-width: 1024px) {
-
-}
-
-@media(max-width: 768px) {
-
-}
-
-@media(max-width: 600px) {
-  footer {
-    #redessociales {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-    }
-
-    #aside {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  }
-}
-
-@media(max-width: 480px) {
-  #mainproductos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media(min-width: 320px) and (max-width: 400px) {}
-
-@media(max-width: 320px) {
-  header {
-    #navbarNav {
-      font-family: $pacifico;
-      font-size: 0.8rem;
-    }
-  }
-
-  header {
-    .fontsize {
-      font-family: $pacifico;
-      font-size: 1rem;
-    }
-  }
-
-  footer {
-    #redessociales {
-      display: flex;
-      flex-direction: column;
+    @include media(1024px) {
       flex-wrap: wrap;
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
     }
 
-    #aside {
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
-  #mainproductos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    #sectionproduc1{
-      nav{
-        #menuproduct1{
-          li{
-            font-size: 1rem;
+    flex-basis: 20%;
+    margin: 10px;
+
+    nav {
+      #menuproduct1 {
+        border: $border;
+        border-radius: 10px;
+        background-color: $fondoblack;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        li {
+          @include contenedortexto($fondogold, black, 10px, 0px, 1.5rem, $pacifico, $border, 10px);
+          @include reseto-lista;
+          text-align: center;
+
+          &:hover {
+            background-color: brown;
           }
-        }
-      }
-    }
-    #sectionproduc2{
-      nav{
-        #menuproduct2{
-          li{
-            font-size: 1rem;
+
+          a {
+            text-decoration: none;
+            color: $fondoblack;
+
+            &:hover {
+              color: white;
             }
           }
         }
       }
-    } 
+    }
   }
+
+  #sectionproductimg {
+    @include flexbox(column, wrap, center, center);
+    flex-basis: 20%;
+
+    div {
+      @include flexbox(column, wrap, center, center);
+      animation-timing-function: linear;
+      animation: backInUp;
+      animation-duration: 1.3s;
+
+      img {
+        @include contenedorimg($fondogold, 200px, 200px, $border, 10px, 10px, 5px);
+
+        @include media(1200px) {
+          width: 160px;
+          height: 160px;
+        }
+
+        @include media(991.98px) {
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+  }
+
+  #sectionproduc2 {
+    @include flexbox(row, nowrap, center, center);
+
+    @include media(1024px) {
+      flex-wrap: wrap;
+    }
+
+    flex-basis: 20%;
+
+    nav {
+      #menuproduct2 {
+        border: $border;
+        border-radius: 10px;
+        background-color: $fondoblack;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        li {
+          @include contenedortexto($fondogold, black, 10px, 0px, 1.5rem, $pacifico, $border, 10px);
+          @include reseto-lista;
+          text-align: center;
+
+          &:hover {
+            background-color: brown;
+          }
+
+          a {
+            text-decoration: none;
+            color: $fondoblack;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #sectionproductimg3 {
+    @include flexbox(column, wrap, center, center);
+    flex-basis: 20%;
+
+    div {
+      @include flexbox(column, wrap, center, center);
+      animation-timing-function: linear;
+      animation: backInRight;
+      animation-duration: 1.3s;
+
+      img {
+        @include contenedorimg($fondogold, 200px, 200px, $border, 10px, 10px, 5px);
+
+        @include media(1200px) {
+          width: 160px;
+          height: 160px;
+        }
+
+        @include media(991.98px) {
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+  }
+}

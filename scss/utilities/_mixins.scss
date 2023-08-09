@@ -1,10 +1,48 @@
-@mixin reseto-lista{
+@mixin reseto-lista {
     list-style: none;
-    
-}@mixin flexbox($direction, $wrap, $justify, $align) {
-    display:flex;
-    flex-direction:$direction;
-    flex-wrap:$wrap;
-    justify-content:$justify;
-    align-items:$align;
+
+}
+
+@mixin flexbox($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin contenedor($border-radius, $border, $color, $margin-bottom, $padding, $ancho) {
+    border-radius: $border-radius;
+    border: $border;
+    background-color: $color;
+    margin-bottom: $margin-bottom;
+    padding: $padding;
+    width: $ancho;
+}
+
+@mixin contenedortexto($background-color, $color, $margin, $padding, $font-size, $font-family, $border, $border-radius) {
+    background-color: $background-color;
+    color: $color;
+    margin: $margin;
+    padding: $padding;
+    font-size: $font-size;
+    font-family: $font-family;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+@mixin contenedorimg($color, $ancho, $alto, $border, $border-radius, $margin, $padding) {
+    background-color: $color ;
+    width: $ancho;
+    height: $alto;
+    border: $border;
+    border-radius: $border-radius;
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin media($medida : 480px) {
+    @media screen and (max-width: $medida) {
+        @content
+    }
 }

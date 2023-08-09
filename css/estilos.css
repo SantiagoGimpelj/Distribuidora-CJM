@@ -1,8 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 0.5fr;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  grid-area: header;
+}
+header h1 {
+  color: white;
+}
+header h1:hover {
+  color: rgb(0, 255, 200);
+}
+header li:hover {
+  background-color: rgb(0, 255, 200);
+  transform: scale(1.1, 1.3);
+  transition: transform linear;
+}
+header a {
+  text-decoration: none;
+}
+
+.fontsize {
+  font-family: pacifico;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 320px) {
+  .fontsize {
+    font-family: pacifico;
+    font-size: 1rem;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.lifondo {
+  background-color: gold;
+}
+
+.marginpadding {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#navbarNav {
+  font-family: pacifico;
+  font-size: 1rem;
+}
+
+main {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 19%, rgb(245, 255, 0) 53%, rgb(0, 0, 0) 83%);
+  grid-area: main;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  grid-area: footer;
+}
+@media screen and (max-width: 320px) {
+  footer #redessociales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+footer #redessociales img {
+  width: 80px;
+  background-color: black;
+  border: solid 4px white;
+  border-radius: 20px;
+  margin: 10px;
+}
+@media screen and (max-width: 600px) {
+  footer #redessociales img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 320px) {
+  footer #redessociales img {
+    width: 40px;
+    height: 40px;
+  }
+}
+footer #redessociales img:hover {
+  background-color: brown;
+  border-radius: 20px;
+  color: white;
+}
+footer #aside img {
+  background-color: gold;
+  width: 80px;
+  height: 80px;
+  border: solid 4px white;
+  border-radius: 20px;
+  margin: 0px;
+  padding: 5px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+@media screen and (max-width: 600px) {
+  footer #aside img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 320px) {
+  footer #aside img {
+    width: 40px;
+    height: 40px;
+  }
+}
+footer #aside img:hover {
+  background-color: brown;
+  border-radius: 20px;
+  color: white;
+}
+
 #mainindex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  #mainindex {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #mainindex #sectionindex1 {
   flex-basis: 70%;
@@ -17,11 +167,39 @@
   color: black;
   margin: 10px;
   padding: 10px;
-  text-align: center;
   font-size: 1.5rem;
-  font-family: pacifico;
-  border: solid white 4px;
+  font-family: "Fira Sans", sans-serif;
+  border: solid 4px white;
   border-radius: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  #mainindex #sectionindex1 p {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #mainindex #sectionindex1 p {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainindex #sectionindex1 p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #mainindex #sectionindex1 p {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #mainindex #sectionindex1 p {
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.7rem;
+  }
 }
 #mainindex #sectionindex2 {
   flex-basis: 30%;
@@ -45,123 +223,137 @@
   grid-area: imgin4;
 }
 #mainindex #sectionindex2 img {
+  background-color: gold;
   width: 270px;
   height: 270px;
   border: solid 4px white;
+  border-radius: 10px;
   margin: 5px;
   padding: 10px;
-  background-color: gold;
-  border-radius: 10px;
 }
-
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   #mainindex #sectionindex2 img {
     width: 200px;
     height: 200px;
   }
 }
-@media (max-width: 768px) {
-  #mainindex {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+@media screen and (max-width: 768px) {
   #mainindex #sectionindex2 img {
     width: 150px;
     height: 150px;
   }
 }
-@media (max-width: 600px) {
-  footer #redessociales img {
-    width: 60px;
-    height: 60px;
-  }
-  footer #aside img {
-    width: 60px;
-    height: 60px;
-  }
-  #mainindex #sectionindex1 p {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #mainindex #sectionindex2 img {
     width: 120px;
     height: 120px;
   }
 }
-@media (min-width: 320px) and (max-width: 400px) {
-  #mainindex #sectionindex1 p {
-    font-size: 0.8;
-  }
-}
-@media (max-width: 320px) {
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  #mainindex #sectionindex1 p {
-    margin: 5px;
-    padding: 5px;
-    font-size: 0.7rem;
-  }
+@media screen and (max-width: 320px) {
   #mainindex #sectionindex2 img {
     width: 80px;
     height: 80px;
     padding: 5px;
   }
-  footer #redessociales {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer #redessociales img {
-    width: 40px;
-    height: 40px;
-  }
-  footer #aside img {
-    width: 40px;
-    height: 40px;
-  }
 }
+
 main form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: none;
   color: black;
+  margin: 10px;
+  padding: 0px;
   font-size: 1rem;
   font-family: pacifico;
+  border: none;
+  border-radius: 0px;
   text-align: center;
-  margin: 10px;
 }
 main form h2 {
   font-size: 2rem;
 }
+@media screen and (max-width: 480px) {
+  main form h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  main form h2 {
+    font-size: 1rem;
+  }
+}
 main form #fieldset1 {
   border-radius: 10px;
-  border: 4px solid white;
+  border: solid 4px white;
   background-color: gold;
   margin-bottom: 10px;
   padding: 10px;
   width: 800px;
+}
+@media screen and (max-width: 768px) {
+  main form #fieldset1 {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main form #fieldset1 {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 320px) {
+  main form #fieldset1 {
+    width: 300px;
+  }
 }
 main form #fieldset2 {
   border-radius: 10px;
-  border: 4px solid white;
+  border: solid 4px white;
   background-color: gold;
   margin-bottom: 10px;
-  width: 800px;
   padding: 10px;
+  width: 800px;
+}
+@media screen and (max-width: 768px) {
+  main form #fieldset2 {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main form #fieldset2 {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 320px) {
+  main form #fieldset2 {
+    width: 300px;
+  }
 }
 main form #fieldset3 {
   border-radius: 10px;
-  border: 4px solid white;
+  border: solid 4px white;
   background-color: gold;
   margin-bottom: 10px;
-  width: 800px;
   padding: 10px;
+  width: 800px;
+}
+@media screen and (max-width: 768px) {
+  main form #fieldset3 {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main form #fieldset3 {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 320px) {
+  main form #fieldset3 {
+    width: 300px;
+  }
 }
 main form .boton {
   border: 4px solid white;
@@ -169,94 +361,17 @@ main form .boton {
   padding: 5px;
 }
 
-@media (max-width: 768px) {
-  main form #fieldset1 {
-    width: 700px;
-  }
-  main form #fieldset2 {
-    width: 700px;
-  }
-  main form #fieldset3 {
-    width: 700px;
-  }
-}
-@media (max-width: 600px) {
-  footer #redessociales img {
-    width: 60px;
-    height: 60px;
-  }
-  footer #aside img {
-    width: 60px;
-    height: 60px;
-  }
-}
-@media (max-width: 480px) {
-  main form h2 {
-    font-size: 1.5rem;
-  }
-  main form #fieldset1 {
-    width: 500px;
-  }
-  main form #fieldset2 {
-    width: 500px;
-  }
-  main form #fieldset3 {
-    width: 500px;
-  }
-}
-@media (min-width: 320px) and (max-width: 400px) {
-  main form h2 {
-    font-size: 1rem;
-  }
-  main form #fieldset1 {
-    width: 350px;
-  }
-  main form #fieldset2 {
-    width: 350px;
-  }
-  main form #fieldset3 {
-    width: 350px;
-  }
-}
-@media (max-width: 320px) {
-  header #navbarNav {
-    font-family: pacifico;
-    font-size: 0.8rem;
-  }
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  footer #redessociales {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer #redessociales img {
-    width: 40px;
-    height: 40px;
-  }
-  footer #aside img {
-    width: 40px;
-    height: 40px;
-  }
-  main form h2 {
-    font-size: 1rem;
-  }
-  main form #fieldset1 {
-    width: 300px;
-  }
-  main form #fieldset2 {
-    width: 300px;
-  }
-  main form #fieldset3 {
-    width: 300px;
-  }
-}
 #mainnosotros {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  #mainnosotros {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #mainnosotros #sectionnos1 {
   display: flex;
@@ -268,14 +383,50 @@ main form .boton {
   margin: 10px;
   text-align: center;
 }
-#mainnosotros #sectionnos1 p {
-  color: black;
+@media screen and (max-width: 1024px) {
+  #mainnosotros #sectionnos1 div {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #mainnosotros #sectionnos1 div {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #mainnosotros #sectionnos1 div {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #mainnosotros #sectionnos1 div {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #mainnosotros #sectionnos1 div {
+    width: 200px;
+  }
+}
+#mainnosotros #sectionnos1 div p {
   background-color: gold;
-  border: 4px solid white;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: pacifico;
+  color: black;
+  margin: 5px;
   padding: 10px;
+  font-size: 1.5rem;
+  font-family: "Fira Sans", sans-serif;
+  border: solid 4px white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  #mainnosotros #sectionnos1 div p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #mainnosotros #sectionnos1 div p {
+    font-size: 1rem;
+  }
 }
 #mainnosotros #sectionnos2 {
   display: flex;
@@ -286,114 +437,100 @@ main form .boton {
   flex-basis: 50%;
 }
 #mainnosotros #sectionnos2 img {
+  background-color: gold;
   width: 500px;
   height: 500px;
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
+  margin: 0px;
   padding: 10px;
-  background-color: gold;
 }
-
-@media (max-width: 1200px) {
-  #mainnosotros #sectionnos1 p {
-    font-size: 1.3rem;
-  }
+@media screen and (max-width: 1200px) {
   #mainnosotros #sectionnos2 img {
     width: 400px;
     height: 400px;
   }
 }
-@media (max-width: 1024px) {
-  #mainnosotros {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  #mainnosotros #sectionnos1 div {
-    width: 800px;
-  }
-}
-@media (max-width: 768px) {
-  #mainnosotros #sectionnos1 div {
-    width: 600px;
-  }
-}
-@media (max-width: 600px) {
-  footer #redessociales img {
-    width: 60px;
-    height: 60px;
-  }
-  footer #aside img {
-    width: 60px;
-    height: 60px;
-  }
-  #mainnosotros #sectionnos1 div {
-    width: 400px;
-  }
-}
-@media (max-width: 480px) {
-  #mainnosotros #sectionnos1 div {
-    width: 300px;
-  }
-  #mainnosotros #sectionnos1 div p {
-    font-size: 1rem;
-  }
+@media screen and (max-width: 480px) {
   #mainnosotros #sectionnos2 img {
     width: 300px;
     height: 300px;
   }
 }
-@media (max-width: 320px) {
-  header #navbarNav {
-    font-family: pacifico;
-    font-size: 0.8rem;
-  }
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  footer #redessociales {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer #redessociales img {
-    width: 40px;
-    height: 40px;
-  }
-  footer #aside img {
-    width: 40px;
-    height: 40px;
-  }
-  #mainnosotros #sectionnos1 div {
-    width: 200px;
-  }
-  #mainnosotros #sectionnos1 div p {
-    font-size: 0.7rem;
-  }
+@media screen and (max-width: 320px) {
   #mainnosotros #sectionnos2 img {
     width: 200px;
     height: 200px;
   }
 }
+
 #mainproductos {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 991.98px) {
+  #mainproductos {
+    flex-direction: column;
+  }
+}
+#mainproductos #sectionproductimg1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+}
+#mainproductos #sectionproductimg1 div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-timing-function: linear;
+  animation: backInLeft;
+  animation-duration: 1.3s;
+}
+#mainproductos #sectionproductimg1 div img {
+  background-color: gold;
+  width: 200px;
+  height: 200px;
+  border: solid 4px white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+@media screen and (max-width: 1200px) {
+  #mainproductos #sectionproductimg1 div img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #mainproductos #sectionproductimg1 div img {
+    width: 160px;
+    height: 160px;
+  }
 }
 #mainproductos #sectionproduc1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  flex-basis: 50%;
+  flex-basis: 20%;
   margin: 10px;
 }
+@media screen and (max-width: 1024px) {
+  #mainproductos #sectionproduc1 {
+    flex-wrap: wrap;
+  }
+}
 #mainproductos #sectionproduc1 nav #menuproduct1 {
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
   background-color: black;
   display: flex;
@@ -401,15 +538,16 @@ main form .boton {
   padding: 10px;
 }
 #mainproductos #sectionproduc1 nav #menuproduct1 li {
-  list-style: none;
-  color: black;
   background-color: gold;
+  color: black;
   margin: 10px;
-  text-align: center;
+  padding: 0px;
   font-size: 1.5rem;
   font-family: pacifico;
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
+  list-style: none;
+  text-align: center;
 }
 #mainproductos #sectionproduc1 nav #menuproduct1 li:hover {
   background-color: brown;
@@ -421,16 +559,60 @@ main form .boton {
 #mainproductos #sectionproduc1 nav #menuproduct1 li a:hover {
   color: white;
 }
-#mainproductos #sectionproduc2 {
+#mainproductos #sectionproductimg {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+}
+#mainproductos #sectionproductimg div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-timing-function: linear;
+  animation: backInUp;
+  animation-duration: 1.3s;
+}
+#mainproductos #sectionproductimg div img {
+  background-color: gold;
+  width: 200px;
+  height: 200px;
+  border: solid 4px white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+@media screen and (max-width: 1200px) {
+  #mainproductos #sectionproductimg div img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #mainproductos #sectionproductimg div img {
+    width: 160px;
+    height: 160px;
+  }
+}
+#mainproductos #sectionproduc2 {
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  flex-basis: 50%;
+  flex-basis: 20%;
+}
+@media screen and (max-width: 1024px) {
+  #mainproductos #sectionproduc2 {
+    flex-wrap: wrap;
+  }
 }
 #mainproductos #sectionproduc2 nav #menuproduct2 {
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
   background-color: black;
   display: flex;
@@ -438,15 +620,16 @@ main form .boton {
   padding: 10px;
 }
 #mainproductos #sectionproduc2 nav #menuproduct2 li {
-  list-style: none;
   background-color: gold;
   color: black;
   margin: 10px;
-  text-align: center;
+  padding: 0px;
   font-size: 1.5rem;
   font-family: pacifico;
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
+  list-style: none;
+  text-align: center;
 }
 #mainproductos #sectionproduc2 nav #menuproduct2 li:hover {
   background-color: brown;
@@ -458,77 +641,77 @@ main form .boton {
 #mainproductos #sectionproduc2 nav #menuproduct2 li a:hover {
   color: white;
 }
+#mainproductos #sectionproductimg3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+}
+#mainproductos #sectionproductimg3 div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-timing-function: linear;
+  animation: backInRight;
+  animation-duration: 1.3s;
+}
+#mainproductos #sectionproductimg3 div img {
+  background-color: gold;
+  width: 200px;
+  height: 200px;
+  border: solid 4px white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+@media screen and (max-width: 1200px) {
+  #mainproductos #sectionproductimg3 div img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  #mainproductos #sectionproductimg3 div img {
+    width: 160px;
+    height: 160px;
+  }
+}
 
-@media (max-width: 600px) {
-  footer #redessociales img {
-    width: 60px;
-    height: 60px;
-  }
-  footer #aside img {
-    width: 60px;
-    height: 60px;
-  }
-}
-@media (max-width: 480px) {
-  #mainproductos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 320px) {
-  header #navbarNav {
-    font-family: pacifico;
-    font-size: 0.8rem;
-  }
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  footer #redessociales {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer #redessociales img {
-    width: 40px;
-    height: 40px;
-  }
-  footer #aside img {
-    width: 40px;
-    height: 40px;
-  }
-  #mainproductos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  #mainproductos #sectionproduc1 nav #menuproduct1 li {
-    font-size: 1rem;
-  }
-  #mainproductos #sectionproduc2 nav #menuproduct2 li {
-    font-size: 1rem;
-  }
-}
 main #sectionpromo1 {
   display: flex;
-  flex-direction: eow;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 main #sectionpromo1 h2 {
-  color: black;
   background-color: gold;
-  margin-top: 10px;
+  color: black;
+  margin: 0px;
   padding: 10px;
+  font-size: 2rem;
   font-family: pacifico;
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  animation-timing-function: linear;
+  animation: backInDown;
+  animation-duration: 1.5s;
+}
+@media screen and (max-width: 600px) {
+  main #sectionpromo1 h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  main #sectionpromo1 h2 {
+    font-size: 0.8rem;
+  }
 }
 main #sectionpromo1 h2:hover {
   background-color: brown;
@@ -543,32 +726,84 @@ main #sectionpromo2 {
   justify-items: center;
   align-items: center;
 }
+@media screen and (max-width: 480px) {
+  main #sectionpromo2 {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "imgpromo1 imgpromo3" "imgpromo5 imgpromo6" "imgpromo2 imgpromo4";
+  }
+}
+@media screen and (max-width: 320px) {
+  main #sectionpromo2 {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "imgpromo1" "imgpromo3" "imgpromo5" "imgpromo6" "imgpromo2" "imgpromo4";
+  }
+}
 main #sectionpromo2 img {
+  background-color: gold;
   width: 270px;
   height: 270px;
-  border: solid white 4px;
+  border: solid 4px white;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  background-color: gold;
+  animation-timing-function: linear;
+  animation: backInLeft;
+  animation-duration: 1.5s;
 }
 main #sectionpromo2 img:hover {
   background-color: brown;
 }
+@media screen and (max-width: 768px) {
+  main #sectionpromo2 img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main #sectionpromo2 img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 320px) {
+  main #sectionpromo2 img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+  }
+}
 main #sectionpromo2 h3 {
+  background-color: gold;
   color: black;
+  margin: 0px;
+  padding: 0px;
+  font-size: 2.5rem;
+  font-family: pacifico;
+  border: solid 4px white;
+  border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 2.5rem;
   text-align: center;
-  font-family: pacifico;
-  background-color: gold;
-  border: 4px white solid;
-  border-radius: 10px;
+  animation-timing-function: linear;
+  animation: backInRight;
+  animation-duration: 1.5s;
 }
 main #sectionpromo2 h3:hover {
   background-color: brown;
   color: white;
+}
+@media screen and (max-width: 600px) {
+  main #sectionpromo2 h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  main #sectionpromo2 h3 {
+    font-size: 1rem;
+  }
 }
 main #sectionpromo2 h3::before {
   content: "$ ";
@@ -593,194 +828,6 @@ main #sectionpromo2 #imgpromo5 {
 }
 main #sectionpromo2 #imgpromo6 {
   grid-area: imgpromo6;
-}
-
-@media (max-width: 768px) {
-  main #sectionpromo2 img {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (max-width: 600px) {
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1.3rem;
-  }
-  footer #redessociales img {
-    width: 60px;
-    height: 60px;
-  }
-  footer #aside img {
-    width: 60px;
-    height: 60px;
-  }
-  main #sectionpromo1 h2 {
-    font-size: 1rem;
-  }
-  main #sectionpromo2 img {
-    width: 150px;
-    height: 150px;
-  }
-  main #sectionpromo2 h3 {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 480px) {
-  main #sectionpromo1 h2 {
-    font-size: 0.8rem;
-  }
-  main #sectionpromo2 img {
-    width: 100px;
-    height: 100px;
-    margin: 2px;
-    padding: 2px;
-  }
-  main #sectionpromo2 h3 {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 320px) and (max-width: 400px) {
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  main #sectionpromo1 h2 {
-    font-size: 0.6rem;
-  }
-  main #sectionpromo2 img {
-    width: 75px;
-    height: 75px;
-    margin: 2px;
-    padding: 2px;
-  }
-  main #sectionpromo2 h3 {
-    font-size: 0.6rem;
-  }
-}
-@media (max-width: 320px) {
-  header #navbarNav {
-    font-family: pacifico;
-    font-size: 0.8rem;
-  }
-  header .fontsize {
-    font-family: pacifico;
-    font-size: 1rem;
-  }
-  footer #redessociales {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer #redessociales img {
-    width: 40px;
-    height: 40px;
-  }
-  footer #aside img {
-    width: 40px;
-    height: 40px;
-  }
-  main #sectionpromo1 h2 {
-    font-size: 0.6rem;
-  }
-  main #sectionpromo2 img {
-    width: 60px;
-    height: 60px;
-    margin: 2px;
-    padding: 2px;
-  }
-  main #sectionpromo2 h3 {
-    font-size: 0.6rem;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr 0.5fr;
-  grid-template-areas: "header" "main" "footer";
-}
-body header {
-  grid-area: header;
-}
-body header h1 {
-  color: white;
-}
-body header h1:hover {
-  color: brown;
-}
-body header li:hover {
-  background-color: brown;
-}
-body header a {
-  text-decoration: none;
-}
-body main {
-  background: linear-gradient(180deg, rgb(0, 0, 0) 19%, rgb(245, 255, 0) 53%, rgb(0, 0, 0) 83%);
-  grid-area: main;
-}
-body footer {
-  background-color: black;
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.fontsize {
-  font-family: pacifico;
-  font-size: 2rem;
-}
-
-.lifondo {
-  background-color: gold;
-}
-
-.marginpadding {
-  margin-top: 10px;
-  padding: 10px;
-}
-
-#navbarNav {
-  font-family: pacifico;
-  font-size: 1rem;
-}
-
-#redessociales img {
-  width: 80px;
-  background-color: black;
-  border: solid 4px rgb(255, 255, 255);
-  border-radius: 20px;
-  margin: 10px;
-}
-#redessociales img:hover {
-  background-color: brown;
-  border-radius: 20px;
-  color: white;
-}
-
-#aside img {
-  background-color: gold;
-  width: 80px;
-  height: 80px;
-  border: 5px solid white;
-  padding: 5px;
-  border-radius: 20px;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-}
-#aside img:hover {
-  background-color: brown;
-  border-radius: 20px;
-  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */

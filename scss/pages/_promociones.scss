@@ -1,14 +1,22 @@
 main {
   #sectionpromo1 {
-    @include flexbox(eow, nowrap, center, center);
+    @include flexbox(row, nowrap, center, center);
+
     h2 {
-      color: black;
-      background-color: gold;
+      @include contenedortexto($fondogold, black, 0px, 10px, 2rem, $pacifico, $border, 10px);
+      margin-bottom: 10px;
       margin-top: 10px;
-      padding: 10px;
-      font-family: pacifico;
-      border: solid white 4px;
-      border-radius: 10px;
+      animation-timing-function: linear;
+      animation: backInDown;
+      animation-duration: 1.5s;
+
+      @include media(600px) {
+        font-size: 1rem;
+      }
+
+      @include media(320px) {
+        font-size: 0.8rem;
+      }
 
       &:hover {
         background-color: brown;
@@ -29,35 +37,78 @@ main {
     justify-items: center;
     align-items: center;
 
+    @include media(480px) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "imgpromo1 imgpromo3"
+        "imgpromo5 imgpromo6"
+        "imgpromo2 imgpromo4";
+    }
+
+    @include media(320px) {
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "imgpromo1"
+        "imgpromo3"
+        "imgpromo5"
+        "imgpromo6"
+        "imgpromo2"
+        "imgpromo4";
+      }
+    
     img {
+      @include contenedorimg($fondogold, 270px, 270px, $border, 10px, 10px, 10px);
+
       &:hover {
         background-color: brown;
       }
 
-      width: 270px;
-      height: 270px;
-      border: solid white 4px;
-      border-radius: 10px;
-      margin: 10px;
-      padding: 10px;
-      background-color: $fondogold;
+      animation-timing-function: linear;
+      animation:backInLeft;
+      animation-duration: 1.5s;
+
+      @include media(768px) {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include media(600px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include media(320px) {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        padding: 5px;
+      }
     }
 
     h3 {
+      @include contenedortexto($fondogold, black, 0px, 0px, 2.5rem, $pacifico, $border, 10px);
+
       &:hover {
         background-color: brown;
         color: white;
       }
 
-      color: $fondoblack;
       margin-left: 10px;
       margin-right: 10px;
-      font-size: 2.5rem;
       text-align: center;
-      font-family: $pacifico;
-      background-color: $fondogold;
-      border:4px white solid;
-      border-radius: 10px;
+      animation-timing-function: linear;
+      animation: backInRight;
+      animation-duration: 1.5s;
+
+      @include media(600px) {
+        font-size: 1.5rem;
+      }
+
+      @include media(320px) {
+        font-size: 1rem;
+      }
     }
 
     h3::before {
@@ -90,174 +141,6 @@ main {
 
     #imgpromo6 {
       grid-area: imgpromo6;
-    }
-  }
-}
-
-// RESPONSIVE DE PROMOCIONES
-@media(max-width: 1200px) {}
-
-@media(max-width: 1024px) {}
-
-@media(max-width: 768px) {
-  main {
-    #sectionpromo2 {
-      img {
-        width: 200px;
-        height: 200px;
-      }
-    }
-  }
-}
-
-@media(max-width: 600px) {
-  header {
-    .fontsize {
-      font-family: $pacifico;
-      font-size: 1.3rem;
-    }
-  }
-  footer {
-    #redessociales {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-    }
-
-    #aside {
-      img {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  }
-
-  main {
-    #sectionpromo1 {
-      h2 {
-        font-size: 1rem;
-      }
-    }
-
-    #sectionpromo2 {
-      img {
-        width: 150px;
-        height: 150px;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-@media(max-width: 480px) {
-  main {
-    #sectionpromo1 {
-      h2 {
-        font-size: 0.8rem;
-      }
-    }
-
-    #sectionpromo2 {
-      img {
-        width: 100px;
-        height: 100px;
-        margin: 2px;
-        padding: 2px;
-      }
-
-      h3 {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media(min-width: 320px) and (max-width: 400px) {
-  header {
-    .fontsize {
-      font-family: $pacifico;
-      font-size: 1rem;
-    }
-  }
-  main {
-    #sectionpromo1 {
-      h2 {
-        font-size: 0.6rem;
-      }
-    }
-
-    #sectionpromo2 {
-      img {
-        width: 75px;
-        height: 75px;
-        margin: 2px;
-        padding: 2px;
-      }
-
-      h3 {
-        font-size: 0.6rem;
-      }
-    }
-  }
-}
-
-@media(max-width: 320px) {
-  header {
-    #navbarNav {
-      font-family: $pacifico;
-      font-size: 0.8rem;
-    }
-  }
-
-  header {
-    .fontsize {
-      font-family: $pacifico;
-      font-size: 1rem;
-    }
-  }
-
-  footer {
-    #redessociales {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    #aside {
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
-
-  main {
-    #sectionpromo1 {
-      h2 {
-        font-size: 0.6rem;
-      }
-    }
-
-    #sectionpromo2 {
-      img {
-        width: 60px;
-        height: 60px;
-        margin: 2px;
-        padding: 2px;
-      }
-
-      h3 {
-        font-size: 0.6rem;
-      }
     }
   }
 }
